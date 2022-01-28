@@ -8,7 +8,7 @@ import androidx.databinding.BindingAdapter
 @BindingAdapter("mailAction")
 fun mailAction(view: TextView, mailAction: String?) {
     if (mailAction.isNullOrEmpty()) return
-
+    view.text = mailAction
     view.setOnClickListener {
         val mailIntent = Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:${mailAction}"))
         view.context.startActivity(Intent.createChooser(mailIntent, "Email"))
