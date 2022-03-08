@@ -1,5 +1,6 @@
 {
 	"name": "mail",
 	"binding": "mailAction",
-	"type" : "text"
+	"type" : "text",
+	"target" : ["ios", "android"]
 }
